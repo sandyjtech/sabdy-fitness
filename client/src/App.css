@@ -1,0 +1,9 @@
+body {
+  height: max-content;
+}
+.page-container{
+  height: 100%;
+}
+.content-container {
+align-items: center;
+}

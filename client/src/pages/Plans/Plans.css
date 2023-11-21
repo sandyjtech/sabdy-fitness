@@ -1,0 +1,23 @@
+/* Plan.css */
+
+.plan-card {
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  width: 90%;
+  background-color: beige;
+  margin: 10px auto; /* Remove left and right margin, adjust top margin as needed */
+  transition: all 0.3s ease-in-out;
+}
+
+.plan-card:hover {
+  border-color: #007bff;
+  transform: translateY(-5px);
+}
+
+.home {
+  font-family: "Fira Sans Condensed", sans-serif;
+  background-color: beige;
+  padding: 10px; /* Add some padding to the home class */
+}

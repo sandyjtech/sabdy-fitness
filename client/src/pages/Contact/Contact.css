@@ -1,0 +1,67 @@
+/* Contact.css */
+:root {
+    --size: 320px; /* change size */
+    --bg: #eee8dc; /* change color */
+  }
+  
+  .envelope {
+    height: calc(var(--size) / 1.6);
+    width: var(--size);
+    background-color: var(--bg);
+    position: relative;
+    overflow: hidden;
+    margin: 5% auto;
+    transition: transform 0.3s ease;
+  }
+  .envelope:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+  }
+  .envelope::before,
+  .envelope::after {
+    content: "";
+    height: calc(var(--size) * 0.75);
+    width: calc(var(--size) * 0.75);
+    border: calc(0.02 * var(--size)) solid rgba(238, 232, 220, 0.96); 
+    position: absolute;
+    border-radius: calc(var(--size) * 0.1) calc(var(--size) * 0.1) 20px calc(var(--size) * 0.1);
+    background-color: var(--bg);
+  }
+  
+  .envelope::before {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+  }
+  
+  .envelope::after {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 1px 1px 20px 1px rgba(204, 198, 182, 0.85); /* darken($bg, 15%) */
+  }
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    margin: 5px auto;
+  }
+
+  .content-container2 {
+    flex: 1;
+    
+  }
+  .title {
+    text-align: center;
+   
+  }
+  ion-button {
+    color: #ff6000;
+    font-family: 'Vina Sans', cursive; 
+    font-size: 25px;
+    padding: 10px;
+    margin: 20px;
+  }

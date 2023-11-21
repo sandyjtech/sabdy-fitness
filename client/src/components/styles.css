@@ -1,0 +1,179 @@
+/* Header.jsx */
+a {
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: #262a56;
+}
+.form-group {
+  text-align: center;
+}
+.header {
+  padding: 5%;
+  width: 40%;
+  display: flex;
+  background-color: #262a56;
+  font-size: calc(15px + 2vmin);
+  color: white;
+}
+
+.header-photo {
+  width: 2em;
+  height: 30px;
+  width: auto;
+}
+
+.fitness {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 90%;
+  font-weight: bolder;
+  margin: 0 20px 0 3px;
+}
+
+.reg-nav {
+  float: right;
+  margin-right: 1em;
+}
+@media (max-width: 600px) {
+  .form-group {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  .form-group {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  .little-text {
+    width: 50%;
+  }
+  .fitness-img {
+    scale: 150%;
+    position: absolute;
+    right: 0;
+    top: 70%;
+    bottom: 30%;
+  }
+}
+
+.button {
+  color: black;
+  background-color: #ff6000;
+  padding: 0;
+}
+.button:hover {
+  color: aliceblue;
+  background-color: #326532;
+}
+.button2:hover {
+  color: #262a56;
+}
+/* Footer.jsx */
+.custom-footer {
+  font-family: "Fira Sans Condensed", sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: beige;
+  padding: 10px;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.img {
+  vertical-align: middle;
+}
+/* Footer */
+.footer-section {
+  padding: 20px 0;
+}
+
+.footer-section h6 {
+  font-size: 1.2rem;
+  color: #ff6000;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+}
+.social-icons {
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.social-icon:hover {
+  color: #262a56;
+}
+/* Content */
+.orange {
+  background-color: #ff6000;
+}
+
+.blue {
+  background-color: #262a56;
+}
+
+.card {
+  color: #f5f5dc;
+}
+
+/* Home */
+.icon {
+  width: 25px;
+  border-radius: 45%;
+}
+
+.title {
+  color: #262a56;
+  font-family: "Vina Sans", cursive;
+  font-size: 25px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.six-container {
+  border-radius: 5%;
+  text-align: justify;
+}
+
+.p {
+  font-size: 20px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  margin: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.plans {
+  margin: 30px auto;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Tabs */
+ion-tab-button {
+  --color: #262a56;
+  --color-selected: #ff6000;
+
+  &::before {
+    background-color: #ff6000;
+  }
+
+  &.tab-selected::before {
+    background-color: #262a56;
+  }
+}
