@@ -98,7 +98,11 @@ a {
 .footer-section {
   padding: 20px 0;
 }
-
+.item {
+  background-color: #262a56;
+  color: whitesmoke;
+  font-family: "Fira Sans Condensed", sans-serif;
+}
 .footer-section h6 {
   font-size: 1.2rem;
   color: #ff6000;
