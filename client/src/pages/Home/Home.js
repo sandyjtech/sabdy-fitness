@@ -12,7 +12,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import TestimonialsSlides from "../../components/TestimonialsSlides";
 import VideoPlayer from "../../components/VideoPlayer";
-import arm from "../../media/strong arm.png";
+import logo from "../../media/main-logo.png";
 const Home = () => {
   const testimonials = [
     {
@@ -78,12 +78,10 @@ const Home = () => {
             <IonCol
               size="10"
               size-sm="3"
-              size-md="6"
+              size-md="5"
               style={{ margin: "0 auto" }}
             >
-              <IonCard className="card">
-                <IonImg src={arm}></IonImg>
-              </IonCard>
+                <IonImg className="card" src={logo}></IonImg>
             </IonCol>
             <IonCol
               size="10"
@@ -133,3 +131,4 @@ const Home = () => {
 };
 
 export default Home;
+
