@@ -21,7 +21,7 @@ const PlansProvider = ({ children }) => {
       })
       .then((data) => {
         setPlans(data);
-        console.log(data);
+        //console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching posts:", error);
