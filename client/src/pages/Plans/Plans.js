@@ -60,7 +60,9 @@ const Plans = () => {
       <div className="page-container2">
         <IonGrid className="content-container">
           <IonTitle className="title">Choose a plan</IonTitle>
-          <button
+     {user && user.admin ? (
+                        <>     
+    <button
             style={{
               backgroundColor: "#262a56",
               color: "whitesmoke",
@@ -75,7 +77,8 @@ const Plans = () => {
             className="add-post-button"
           >
             <FaPlus /> Add New Plan
-          </button>
+         </button>
+          </>) : null}
           {isAddingNewPlan || editingPlan ? (
             <NewPlanForm
               editingPlan={editingPlan}
