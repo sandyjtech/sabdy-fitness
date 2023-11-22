@@ -54,14 +54,14 @@ const Header = () => {
             <span className="fitness">'s</span>
             Fitness
           </IonTitle>
-          <IonImg
+          {/* <IonImg
             src="test"
             alt="certified"
             style={{
               width: "15%",
             
             }}
-          />
+          /> */}
           <div style={{ width: "30%", textAlign: "right" }}>
             {user ? (
               <ColorButton onClick={handleLogout} size="medium">
