@@ -1,7 +1,6 @@
 import {
   IonTitle,
   IonGrid,
-  IonCard,
   IonRow,
   IonCol,
   IonImg,
