@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  IonHeader, IonToolbar, IonTitle } from "@ionic/react";
+import { IonHeader, IonToolbar, IonTitle, IonImg } from "@ionic/react";
 import { styled } from "@mui/material/styles";
 import Button, { ButtonProps } from "@mui/material/Button";
 import Login from "./Login";
@@ -34,12 +34,12 @@ const Header = () => {
   const ColorButton = styled(Button)(({ theme }) => ({
     color: "black",
     fontFamily: "Fira Sans Condensed",
-    fontWeight: 'bold',
+    fontWeight: "bold",
     backgroundColor: "#ff6000",
-    margin: '5%',
+    margin: "5%",
     "&:hover": {
       backgroundColor: "green",
-      padding: '10px',
+      padding: "10px",
     },
   }));
 
@@ -54,7 +54,15 @@ const Header = () => {
             <span className="fitness">'s</span>
             Fitness
           </IonTitle>
-          <div  style={{width: '30%', textAlign: 'right'}}>
+          <IonImg
+            src="test"
+            alt="certified"
+            style={{
+              width: "15%",
+            
+            }}
+          />
+          <div style={{ width: "30%", textAlign: "right" }}>
             {user ? (
               <ColorButton onClick={handleLogout} size="medium">
                 Logout
@@ -69,12 +77,18 @@ const Header = () => {
                 </ColorButton>
                 <Dialog fullScreen open={showLogin} onClose={closeLogin}>
                   <DialogContent>
-                    <Login toggleSignupModal={openSignup} handleClose={closeLogin}/>
+                    <Login
+                      toggleSignupModal={openSignup}
+                      handleClose={closeLogin}
+                    />
                   </DialogContent>
                 </Dialog>
                 <Dialog fullScreen open={showSignup} onClose={closeSignup}>
                   <DialogContent>
-                    <Signup toggleSignInModal={openLogin} handleClose={closeSignup}/>
+                    <Signup
+                      toggleSignInModal={openLogin}
+                      handleClose={closeSignup}
+                    />
                   </DialogContent>
                 </Dialog>
               </>
@@ -87,3 +101,4 @@ const Header = () => {
 };
 
 export default Header;
+      
