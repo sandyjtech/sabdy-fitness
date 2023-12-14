@@ -4,6 +4,7 @@
     max-width: 600px;
     margin: 80px auto;
     padding: 20px;
+   
   }
   
   .testimonial {
@@ -12,17 +13,23 @@
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: lightgray;
   }
   
   .testimonial-text {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 25px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    color: #262a56;
+    font-weight: bold;
+    
   }
   
   .testimonial-author {
     font-weight: bold;
     font-size: 14px;
+    color: #ff6000;
   }
   
   .nav-button {
