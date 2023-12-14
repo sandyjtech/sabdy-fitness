@@ -54,13 +54,12 @@ const Home = () => {
                   textAlign: "center",
                 }}
               >
-                My interest in fitness started when I was 12 years old. I was
-                always so excited to attend gym class and was offered an
-                athletic scholarship to college. Sadly, I had to take a physical
-                exam and didn't pass or get the scholarship because I was born
-                with a slight curve in my spine. This didn't stop me and I kept
-                exercising after school and my passion for fitness grew. I want
-                to help you reach your goals and cheer for you!
+                "Hey there! Picture this: 12-year-old me, super stoked for gym class like it was Christmas morning.
+                  Fast forward to college, where a sneaky spinal curve stole my athletic scholarship dreams.
+                  But guess what? I didn't let that stop me from turning into a fitness fanatic! Now, 
+                  I'm here to make sweating it out feel like a party and help you crush your goals.
+                  Let's kick some fitness butt together, and I promise, we'll have a blast doing it!
+                  Who said workouts couldn't be both effective and downright fun? Let's make your fitness journey the coolest adventure ever!"
               </p>
             </IonCol>
             <IonCol
