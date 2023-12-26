@@ -4,15 +4,20 @@ import {
   IonRow,
   IonCol,
   IonImg,
+  IonModal,
 } from "@ionic/react";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import TestimonialsSlides from "../../components/TestimonialsSlides";
 import VideoPlayer from "../../components/VideoPlayer";
 import logo from "../../media/main-logo.png";
+import PromoModal from "./PromoModal";
+
 const Home = () => {
+  const [showModal, setShowModal] = useState(true);
+
   const testimonials = [
     {
       text: "Sabdy helped me fit into my wedding dress with only a few months to go.",
@@ -23,7 +28,15 @@ const Home = () => {
       author: "- Hannah L.",
     },
   ];
+  useEffect(() => {
+    // Code to run on page load
+    setShowModal(true);
+  }, []);
 
+  const closeModal = () => {
+    setShowModal(false);
+    console.log("test");
+  };
   return (
     <>
       <Header />
@@ -83,7 +96,7 @@ const Home = () => {
               size-md="5"
               style={{ margin: "0 auto" }}
             >
-                <IonImg className="card" src={logo}></IonImg>
+              <IonImg className="card" src={logo}></IonImg>
             </IonCol>
             <IonCol
               size="10"
@@ -99,8 +112,7 @@ const Home = () => {
                   textAlign: "center",
                 }}
               >
-                
-"Sabdy worked miracles when my dream wedding dress turned out to
+                "Sabdy worked miracles when my dream wedding dress turned out to
                 be two sizes too small. She made me feel like an absolute
                 goddess on the most important day of my life. Thank you for
                 turning my dreams into reality!"
@@ -128,6 +140,18 @@ const Home = () => {
             </IonCol>
           </IonRow>
         </IonGrid>
+
+        {showModal ? (
+          <>
+            <IonModal
+              isOpen={showModal}
+              onDidDismiss={closeModal}
+              cssClass="promo-modal"
+            >
+              <PromoModal closeModal={closeModal} />
+            </IonModal>
+          </>
+        ) : null}
       </div>
       <Footer />
     </>
