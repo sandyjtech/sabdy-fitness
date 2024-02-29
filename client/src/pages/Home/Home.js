@@ -13,10 +13,12 @@ import Footer from "../../components/Footer";
 import TestimonialsSlides from "../../components/TestimonialsSlides";
 import VideoPlayer from "../../components/VideoPlayer";
 import logo from "../../media/main-logo.png";
+import sabdy from "../../media/sabdy.jpg";
+
 import PromoModal from "./PromoModal";
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const testimonials = [
     {
@@ -29,8 +31,12 @@ const Home = () => {
     },
   ];
   useEffect(() => {
-    // Code to run on page load
-    setShowModal(true);
+    // Check if the modal has been shown before
+    const hasModalBeenShown = localStorage.getItem("hasModalBeenShown");
+    if (!hasModalBeenShown) {
+      setShowModal(true); // Show the modal if it hasn't been shown before
+      localStorage.setItem("hasModalBeenShown", "true"); // Set a flag in local storage indicating that the modal has been shown
+    }
   }, []);
 
   const closeModal = () => {
@@ -49,7 +55,7 @@ const Home = () => {
               size-md="6"
               style={{ margin: "0 auto" }}
             >
-              <IonTitle className="title">Meet Sabdy</IonTitle>
+              <IonTitle className="title">Meet Me</IonTitle>
             </IonCol>
           </IonRow>
           <IonRow>
@@ -59,7 +65,37 @@ const Home = () => {
               size-md="6"
               style={{ margin: "0 auto" }}
             >
-              <p
+        
+            <IonCol
+              size="12"
+              size-sm="3"
+              size-md="6"
+              style={{ margin: "10% auto" }}
+            >
+             
+             <IonImg className="card" src={sabdy} style={{width: '100%', margin: '10% auto'}}></IonImg>
+
+             </IonCol>
+              {/* <VideoPlayer /> */}
+            </IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol
+              size="10"
+              size-sm="3"
+              size-md="5"
+              style={{ margin: "0 auto" }}
+            >
+              <IonImg className="card" src={logo}></IonImg>
+            </IonCol>
+            <IonCol
+              size="10"
+              size-sm="3"
+              size-md="6"
+              style={{ margin: "0 auto" }}
+            >
+               <p
                 className="p"
                 style={{
                   fontFamily: "Fira Sans Condensed",
@@ -79,45 +115,7 @@ const Home = () => {
                 ever!"
               </p>
             </IonCol>
-            <IonCol
-              size="10"
-              size-sm="3"
-              size-md="6"
-              style={{ margin: "0 auto" }}
-            >
-              <VideoPlayer />
-            </IonCol>
-          </IonRow>
-
-          <IonRow>
-            <IonCol
-              size="10"
-              size-sm="3"
-              size-md="5"
-              style={{ margin: "0 auto" }}
-            >
-              <IonImg className="card" src={logo}></IonImg>
-            </IonCol>
-            <IonCol
-              size="10"
-              size-sm="3"
-              size-md="6"
-              style={{ margin: "0 auto" }}
-            >
-              <p
-                className="p"
-                style={{
-                  fontFamily: "Fira Sans Condensed",
-                  fontWeight: "bold",
-                  textAlign: "center",
-                }}
-              >
-                "Sabdy worked miracles when my dream wedding dress turned out to
-                be two sizes too small. She made me feel like an absolute
-                goddess on the most important day of my life. Thank you for
-                turning my dreams into reality!"
-              </p>
-            </IonCol>
+  
           </IonRow>
           <IonRow>
             <IonCol
