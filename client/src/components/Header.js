@@ -48,9 +48,7 @@ const Header = () => {
       <IonToolbar>
         <header className="head">
           <IonTitle className="header">
-            S
-            <img className="header-photo" src={strengthLogo} alt="Strength" />
-            bdy
+            Sabdy
             <span className="fitness">'s</span>
             Fitness
           </IonTitle>
@@ -101,4 +99,4 @@ const Header = () => {
 };
 
 export default Header;
-      
+
