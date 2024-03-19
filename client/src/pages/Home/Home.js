@@ -73,7 +73,7 @@ const Home = () => {
               style={{ margin: "10% auto" }}
             >
              
-             <IonImg className="card" src={sabdy} style={{width: '100%', margin: '10% auto'}}></IonImg>
+          
 
              </IonCol>
               {/* <VideoPlayer /> */}
