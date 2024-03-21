@@ -48,8 +48,7 @@ const Header = () => {
       <IonToolbar>
         <header className="head">
           <IonTitle className="header">
-            Sabdy
-            <span className="fitness">'s</span>
+            Sabdy          
             Fitness
           </IonTitle>
           {/* <IonImg
